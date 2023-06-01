@@ -1,0 +1,477 @@
+@import './colors';
+@import './animate';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+body {
+	position: relative;
+	background-color: $bg-color;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s;
+	z-index: 1;
+
+	.navbar-brand {
+		font-weight: bold;
+		color: $main-color;
+	}
+	.nav-link {
+		color: $white;
+	}
+
+	.nav-link:hover {
+		color: $main-color;
+	}
+
+	.fa-tooth {
+		color: $white;
+		padding: 10px;
+	}
+
+	.fa {
+		color: $white;
+	}
+
+	.active {
+		color: $main-color;
+	}
+}
+
+.shadow-bg {
+	background-color: rgba(37, 32, 32, 0.808);
+}
+
+.header-box {
+	position: relative;
+	height: 100vh;
+	background-image: url('/second-course/projekty/img/small-header.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: $white;
+	z-index: 0;
+
+	.header-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.74);
+		z-index: -10;
+	}
+
+	.header-text {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding: 30px;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		z-index: 5;
+
+		h1 {
+			font-size: 30px;
+			text-transform: uppercase;
+
+			span {
+				font-size: 40px;
+				font-weight: bold;
+				color: $main-color;
+			}
+			.header-bold {
+				color: $white;
+			}
+		}
+
+		.btn {
+			text-transform: uppercase;
+		}
+
+		p {
+			font-size: 19px;
+		}
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		left: 50%;
+		bottom: 20px;
+		transform: translate(-50%, -50%);
+		font-size: 30px;
+		color: $white;
+	}
+}
+
+// main
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: $main-color;
+}
+
+// main - about us
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+	
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+}
+
+// main - equipment
+.equipment-box {
+	position: relative;
+	background-image: url(/second-course/projekty/img/small-equipment.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	color: $white;
+	z-index: 0;
+
+	.equ-shadow {
+		position: absolute;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.74);
+		z-index: -1;
+	}
+
+	.equ-item {
+		margin: 10px 0;
+
+		i {
+			font-size: 30px;
+		}
+		.equ-header {
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+// main - portfolio
+.portfolio {
+	.carousel-item {
+		position: relative;
+		height: 600px;
+
+		.carousel-caption {
+			position: absolute;
+			left: 0;
+			right: 0;
+			padding: 40px 0;
+			background-color: rgba(0, 0, 0, 0.548);
+		}
+	}
+
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+
+	.card {
+		margin: 10px;
+	}
+}
+
+// main - prices
+.prices {
+	.prices-box {
+		padding: 20px;
+		margin: 5px 10px;
+		background-color: rgb(240, 240, 240);
+		box-shadow: 2px 2px 5px;
+		transition: transform 0.5s;
+
+		h3 {
+			text-transform: uppercase;
+			color: $main-color;
+		}
+
+		span {
+			font-weight: bold;
+		}
+
+		i {
+			font-size: 24px;
+			padding: 0 5px;
+		}
+	}
+
+	.prices-box:hover {
+		transform: scale(1.1);
+	}
+
+	.prices-tag {
+		font-weight: bold;
+		font-size: 20px;
+	}
+	.underline-prices {
+		margin: 15px auto;
+		width: 220px;
+		height: 1px;
+		background-color: gray;
+	}
+
+	.prices-btn {
+		width: 100px;
+		height: 40px;
+		background-color: $bgc-button;
+		color: $white;
+		border-radius: 5px;
+		text-transform: uppercase;
+		transition: background-color 0.5s, color 0.5s;
+	}
+
+	.main-btn {
+		background-color: rgb(0, 121, 121);
+	}
+
+	.prices-btn:hover {
+		background-color: $main-color;
+		color: black;
+	}
+
+	.main-box-prices {
+		transform: scale(1.05);
+	}
+
+	.prices-span-footer {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.prices-footer {
+		margin: 30px 15px 0;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+// main - team
+
+.team {
+	position: relative;
+	background-image: url('/second-course/projekty/img/team/job-5382480_1920.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: $white;
+	z-index: 0;
+
+	.team-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.705);
+		z-index: -1;
+	}
+
+	.card {
+		color: rgba(0, 0, 0, 0.89);
+		transition: transform 0.3s;
+
+		.card-title {
+			margin-bottom: 20px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		.card-img-top {
+			height: 300px;
+			object-fit: cover;
+		}
+
+		.card-body {
+			height: 150px;
+		}
+
+		.card-footer {
+			background-color: rgb(236, 235, 235);
+
+			i {
+				padding: 10px;
+			}
+		}
+	}
+	.card:hover {
+		transform: scale(0.95);
+	}
+}
+
+// main - achievements
+
+.achievements {
+	.achiev-item {
+		i {
+			padding: 10px;
+			color: $white;
+			font-size: 40px;
+			text-shadow: 0 0 5px black;
+		}
+
+		:first-child {
+			margin-bottom: 0;
+		}
+
+		.achiev-text {
+			text-transform: uppercase;
+		}
+	}
+}
+
+// main - contact
+
+.contact {
+	position: relative;
+	background-image: url(/second-course/projekty/img/college-5757815_1920.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: $white;
+	z-index: 0;
+
+	.contact-item {
+		margin: 30px 0;
+		h3 {
+			margin-bottom: 20px;
+			text-transform: uppercase;
+		}
+	}
+
+	.contact-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.705);
+		z-index: -1;
+	}
+
+	.social-media {
+		font-size: 25px;
+
+		a {
+			padding: 5px 15px;
+			color: $main-color;
+		}
+	}
+	i {
+		transition: transform 0.3s;
+	}
+	i:hover {
+		color: $white;
+		transform: scale(1.5);
+	}
+}
+
+@media (min-width: 375px) {
+	header {
+		.header-box {
+			.header-text {
+				p {
+					font-size: 25px;
+				}
+
+				h1 {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	html {
+		scroll-padding-top: 92px;
+	}
+	header {
+		.header-box {
+			.header-text {
+				p {
+					font-size: 30px;
+				}
+
+				h1 {
+					font-size: 45px;
+
+					span {
+						font-size: 50px;
+					}
+				}
+			}
+		}
+	}
+
+	nav {
+		.navbar-brand {
+			font-size: 30px;
+		}
+		.nav-link {
+			font-size: 20px;
+		}
+	}
+
+	.prices {
+		.prices-item {
+			margin-top: 0;
+		}
+
+		.prices-footer {
+			font-size: 19px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	nav {
+		height: 92px;
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.header-box {
+			background-image: url('/second-course/projekty/img/big-header.jpg');
+		}
+	}
+
+	.equipment-box {
+		background-image: url(/second-course/projekty/img/big-equipment.jpg);
+	}
+}
